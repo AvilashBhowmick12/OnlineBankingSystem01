@@ -1,0 +1,207 @@
+<!-- customer.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="styles02.css">
+</head>
+<body>
+    <div class="banner11">
+        <h1>Customer Dashboard</h1>
+        <button onclick="window.location.href='login.html'" role="button" class="button-name">Sign Out</button>
+    </div>
+
+    <div class="dashboard">
+
+        <div class="input">
+            <button class="value" onclick="showSection('account')">
+                <span>Account</span>
+            </button>
+            <button class="value" onclick="showSection('transaction')">
+                <span>Transaction</span>
+            </button>
+            <button class="value" onclick="showSection('passbook')">
+                <span>Passbook</span>
+            </button>
+            <button class="value" onclick="showSection('loanApply')">
+                <span>Loan Apply</span>
+            </button>
+            <button class="value" onclick="window.location.href='more.html'">
+                <span>More</span>
+            </button>
+        </div>
+
+        <!-- Add the sections here -->
+        <!-- They are hidden by default and will be shown when the corresponding button is clicked -->
+        <div id="account" class="section11" hidden>
+            <h2>Account Details</h2>
+            <p>Account Holder: <input type="text" value="Avilash B12" readonly></p>
+            <p>IFSC: <input type="text" value="ABCD0012345" readonly></p>
+        
+            <div class="info-box">
+                <p><label for="full-name">Full Name:</label> <input id="full-name" type="text" value="Avilash B12" readonly></p>
+                <p><label for="phone-number">Phone Number:</label> <input id="phone-number" type="number" value="1234567890" readonly></p>
+                <p><label for="email">Email ID:</label> <input id="email" type="email" value="avilash1234@qualcomm.com" readonly></p>
+                <p><label for="account-type">A/c Type:</label> <input id="account-type" type="text" value="SAVINGS BANK ACCOUNT" readonly></p>
+                <p><label for="dob">D.O.B.(if minor):</label> <input id="dob" type="date" value="" readonly></p>
+                <p><label for="address">Address:</label> <input id="address" type="text" value="Kolkata-700111,West Bengal, India" readonly></p>
+                <p><label for="mop">MOP:</label> <input id="mop" type="text" value="SINGLE" readonly></p>
+                <p><label for="opening-date">A/c Opening Dt:</label> <input id="opening-date" type="date" value="19/08/2023" readonly></p>
+                <p><label for="pan">Customer PAN:</label> <input id="pan" type="text" value="JAMES0007B" readonly></p>
+                <p><label for="issue-date">Date of Issue:</label> <input id="issue-date" type="date" value="11/11/1111" readonly></p>
+            </div>
+        
+            <button onclick="editInfo()" class="edit-button">Edit Info</button>
+        
+            <button onclick="hideSection('account')" class="back-button">Back</button>
+        </div>
+
+        <!-- Do the same for the other sections -->
+
+        <!-- Add the transaction form here -->
+        <!-- It is hidden by default and will be shown when the Transaction button is clicked -->
+        <div id="transaction" class="modal" hidden>
+          <form class="form">
+            <!-- Add the content for the Transaction form here -->
+            <!-- For example: -->
+            <!-- Account number field -->
+            <div class ="input_container">
+                <label for ="accountNumber">Account Number :</label><br/>
+                <input type ="text"id ="accountNumber"name ="accountNumber"title ="Account Number" placeholder ="Enter your account number"><br/>
+            </div>
+
+            <!-- IFSC code field -->
+            <div class ="input_container">
+                <label for ="ifscCode">IFSC Code :</label><br/>
+                <input type ="text"id ="ifscCode"name ="ifscCode"title ="IFSC Code" placeholder ="Enter IFSC code"><br/>
+            </div>
+
+            <!-- Branch name field -->
+            <div class ="input_container">
+                <label for ="branchName">Branch Name :</label><br/>
+                <input type ="text"id ="branchName"name ="branchName"title ="Branch Name" placeholder ="Enter branch name"><br/>
+            </div>
+
+            <!-- Name field -->
+            <div class ="input_container">
+                <label for ="name">Name :</label><br/>
+                <input type ="text"id ="name"name ="name"title ="Name" placeholder ="Enter your name"><br/>
+            </div>
+
+            <!-- Amount field -->
+            <div class ="input_container">
+                <label for ="amount">Amount :</label><br/>
+                <input type ="number"id ="amount"name ="amount"title ="Amount" placeholder ="Enter amount"><br/>
+            </div>
+
+            <!-- Pay button -->
+                <button onclick="hideSection('transaction')" class="back-button">Pay</button>
+
+          </form>
+        </div>
+
+        <div id="passbook" class="section111" hidden>
+                <div class="section-container111">
+                    <div class="section111">
+                        <h2>Paasbook Update</h2>
+                        <!-- Add your content here -->
+                         <table>
+                            <tr>
+                                <th>Statements </th>
+                            </tr>
+                            <!-- Add rows for each customer -->
+                            <!-- Replace 'id', 'name', and 'phone' with actual data -->
+                            <tr><td>30/09/2023</td><td>balance ../..</td><td></td><td>** 10,000/-</td></tr>
+                            <tr><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>20/10/2023</td><td>GooglePayS</td><td> - </td><td>100/-</td></tr>
+                            <tr><td>21/10/2023</td><td>SBINAccnt</td><td> + </td><td>200/-</td></tr>
+                            <tr><td>25/10/2023</td><td>GooglePayS</td><td> - </td><td>50/-</td></tr>
+                            <tr><td></td><td></td><td></td><td></td></tr>
+                            <tr><td>31/10/2023</td><td>balance ../..</td><td></td><td>** 10,050/-</td></tr>
+                            <!-- Add more rows as needed -->
+                         </table>
+                    </div>
+                </div>
+            <style>
+            .section-container111 {
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+                width: 150%;
+            }
+            .section111 {
+                width: 60%;
+                border: none;
+                padding: 20px;
+                box-sizing: border-box;
+                text-align: center; /* Align text to the center */
+                background-image: linear-gradient(#79081c,#ff9e01); /* Add a linear gradient background */
+                color: white; /* Change text color to white */
+                border-radius :7px ;
+            }
+            table {
+                width:100%;
+                margin-bottom: 10px;
+            }
+            th {
+               height:50px;
+               text-align:left;
+               padding-left:5px;
+               border-bottom:solid thick #000000; 
+               /*background-color:#f1f1f1;*/ 
+               background-color: #FEC195
+            }
+            td {
+               text-align: left;
+               height:30px; 
+               vertical-align:center; 
+               padding-left:5px; 
+               border-bottom:solid thin #f1f1f1; 
+            }
+            </style>
+
+            <!-- Add the content for the Account section here -->
+            <button onclick="hideSection('passbook')" class="back-button">Print Passbook</button>
+        </div>
+
+        <div id="loanApply" class="section" hidden>
+            <div class="card">
+                <span class="card__title">Apply for Loan</span>
+                <p class="card__content">For getting updates, please enter your registered email address and phone number.</p>
+                <div class="card__form">
+                    <input placeholder="Email" type="text">
+                    <input placeholder="Phone Number" type="text">
+                    <button onclick="hideSection('loanApply')" class="back-button">Send</button>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <!-- Include the scripts.js file -->
+    <script src="scripts.js"></script>
+
+</body>
+<!-- Add this at the end of your body tag -->
+<div class="notifications-container">
+    <div class="alert">
+      <div class="flex">
+        <div class="flex-shrink-0">
+          <svg aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 alert-svg">
+            <path clip-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" fill-rule="evenodd"></path>
+          </svg>
+        </div>
+        <div class="alert-prompt-wrap">
+          <p class="text-sm text-yellow-700">
+            This is the official page for all the processes of the Customer like :banking, loan processes apply, passbook printing and many more. 
+            <a class="alert-prompt-link" href="#">Avilash Bhowmick</a>
+          </p>
+      </div>
+     </div>
+   </div>
+  </div>
+  
+
+
+</html> 

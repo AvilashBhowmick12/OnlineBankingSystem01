@@ -1,0 +1,58 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="loginSection" class="form center">
+        <h2 class="form-title">Login</h2>
+
+        <div class="radio-input">
+            <label>
+                <input type="radio" id="customer" name="value-radio" value="customer">
+                <span>Customer</span>
+            </label>
+            <label>
+                <input type="radio" id="employee" name="value-radio" value="employee">
+                <span>Employee</span>
+            </label>
+            <label>
+                <input type="radio" id="administrator" name="value-radio" value="administrator">
+                <span>Administrator</span>
+            </label>
+
+            <span class="selection"></span>
+        </div>
+
+        <form id="loginForm">
+            <div class="input-container">
+                <label for="userId">User ID:</label><br>
+                <input type="text" id="userId" name="userId" required><br>
+            </div>
+
+            <div class="input-container">
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br>
+            </div>
+
+            <!-- Add a submit button -->
+            <button class ="button">
+                <p class ="submit">Submit</p>
+            </button>
+        </form>
+
+        <!-- Add a sign up button -->
+        <p>New user, not registered?</p>
+        <button class ="button-name" onclick ="window.location.href ='signup.html'">Sign Up</button>
+
+    </div>
+
+    <!-- Add this at the top of your body tag in each HTML file -->
+    <button class="go-home-button" onclick="window.location.href='index.html'">Go Home</button>
+
+    <!-- Include the scripts.js file -->
+    <script src="scripts.js"></script>
+
+</body></html> 

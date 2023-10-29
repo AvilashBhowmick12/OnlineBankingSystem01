@@ -1,0 +1,195 @@
+<!-- Add similar HTML files for employee.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: repeating-linear-gradient(60deg, transparent 30px, rgba(255, 0, 0, 0.2) 10px,rgba(255, 238, 0, 0.2) 90px),
+            repeating-linear-gradient(120deg, transparent 30px, rgba(255, 0, 0, 0.2) 10px,rgba(255, 238, 0, 0.2)90px),
+            repeating-linear-gradient(180deg, transparent 30px, rgba(255, 0, 0, 0.2) 10px, rgba(255, 238, 0, 0.2) 90px);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .header button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        .section-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .section {
+            width: 30%;
+            border: none;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center; /* Align text to the center */
+            background-image: linear-gradient(#79081c,#ff9e01); /* Add a linear gradient background */
+            color: white; /* Change text color to white */
+        }
+        table {
+            width:100%;
+            margin-bottom: 10px;
+        }
+        th {
+           height:50px;
+           text-align:left;
+           padding-left:5px;
+           border-bottom:solid thin #000000; 
+           /*background-color:#f1f1f1;*/ 
+           background-color: #FEC195
+        }
+        td {
+           text-align: left;
+           height:30px; 
+           vertical-align:center; 
+           padding-left:5px; 
+           border-bottom:solid thin #f1f1f1; 
+        }
+        
+        /* CSS changes for buttons */
+        .button-name {
+            align-items: center;
+            appearance: none;
+            background-color: #FCFCFD;
+            border-radius: 4px;
+            border-width: 0;
+            box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px, rgba(45, 35, 66, 0.15) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+            box-sizing: border-box;
+            color: #36395A;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: "JetBrains Mono", monospace;
+            height: 48px;
+            justify-content: center;
+            line-height: 1;
+            list-style: none;
+            overflow: hidden;
+            padding-left: 16px;
+            padding-right: 16px;
+            position: relative;
+            text-align: left;
+            text-decoration: none;
+            transition: box-shadow .15s, transform .15s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            will-change: box-shadow, transform;
+            font-size: 18px;
+        }
+
+        .button-name:focus {
+            box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+        }
+
+        .button-name:hover {
+            box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+
+        .button-name:active {
+            box-shadow: #D6D6E7 0 3px 7px inset;
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Employee Dashboard</h1>
+        <button onclick="window.location.href='login.html'" role="button" class="button-name">Sign Out</button>
+    </div>
+
+    <div class="section-container">
+        <div class="section">
+            <h2>Customer Processes</h2>
+            
+            <!-- Add your content here -->
+            
+             <table>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Name</th> 
+                    <th>Phone Number</th>
+                </tr>
+                <!-- Add rows for each customer -->
+                <!-- Replace 'id', 'name', and 'phone' with actual data -->
+                <tr><td></td><td></td><td></td></tr>
+                <tr><td>Cid1</td><td>Pijush Das</td><td>phone 1</td></tr>
+                <tr><td>Cid2</td><td>Ayaan Dey</td><td>phone 2</td></tr>
+                <tr><td>Cid3</td><td>Debjit Das</td><td>phone 3</td></tr>
+                <tr><td>Cid4</td><td>Debayan Dutta</td><td>phone 4</td></tr>
+                <tr><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td></tr>
+                <!-- Add more rows as needed -->
+             </table>
+             <button class="button-name">Edit Details</button>
+
+        </div>
+
+        <div class="section">
+            <h2>Loan Saction Processes</h2>
+
+             <!-- Add your content here -->
+
+             <table>
+                <tr>
+                    <th>Loan ID</th>
+                    <th>Name</th> 
+                </tr>
+                <!-- Add rows for each employee -->
+                <!-- Replace 'id' and 'name' with actual data -->
+                <tr><td></td><td></td></tr>
+                <tr><td>Lid1</td><td>Prabir Roy</td></tr>
+                <tr><td>Lid2</td><td>Ajay Mishra</td></tr>
+                <tr><td>Lid3</td><td>Loan pending..</td><tr>
+                <tr><td></td><td></td></tr>
+                <tr><td></td><td></td></tr>
+                <tr><td></td><td></td></tr>
+                <!-- Add more rows as needed -->
+             </table>
+             <button class="button-name">Edit Details</button>
+
+        </div>
+
+        <div class="section">
+        <h2>Feedback</h2>
+
+         <!-- Add your content here -->
+
+         <table>
+            <tr>
+                <th>Feedback ID</th>
+                <th>Name</th> 
+            </tr>
+            <!-- Add rows for each feedback -->
+            <!-- Replace 'id' and 'name' with actual data -->
+            <tr><td></td><td></td></tr>
+            <tr><td>Fid1</td><td>name1</td></tr>
+            <tr><td>Fid2</td><td>name2</td></tr>
+            <tr><td></td><td></td></tr>
+            <tr><td></td><td></td></tr>
+            <!-- Add more rows as needed -->
+         </table>
+
+         <!-- Add feedback button -->
+         <button role="button" class="button-name">Add Feedback</button>
+
+    </div>
+
+</div>
